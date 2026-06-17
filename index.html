@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ayodhya Sarthi | Your Digital Travel Companion For Ayodhya</title>
+
+    <meta
+      name="description"
+      content="Ayodhya Sarthi - Explore Ayodhya tourist places, hotels, fare calculator, emergency services and complete travel guidance."
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+<link rel="icon" type="image/png" href="favicon.png">
+  </head>
+
+  <body>
+    <!-- ======================
+LOADER
+====================== -->
+
+    <div
+      id="loader"
+      style="
+        position: fixed;
+        inset: 0;
+        background: #fff8e7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99999;
+      "
+    >
+      <div style="text-align: center">
+        <i
+          class="fas fa-place-of-worship"
+          style="
+            font-size: 60px;
+            color: #ff6b00;
+            animation: spin 2s linear infinite;
+          "
+        >
+        </i>
+
+        <h2 style="margin-top: 15px; color: #8b0000">Ayodhya Sarthi</h2>
+      </div>
+    </div>
+
+    <!-- ======================
+TOP BAR
+====================== -->
+
+    <div class="topbar">
+      <div class="container">
+        <div class="topbar-content">
+          <div>
+            <i class="fas fa-location-dot"></i>
+            Ayodhya, Uttar Pradesh, India
+          </div>
+
+          <div id="liveTime">Loading Time...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================
+HEADER
+====================== -->
+
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="index.html" class="logo">
+            <i class="fas fa-om"></i>
+
+            <div class="logo-text">
+              <h2>Ayodhya Sarthi</h2>
+
+              <span> Your Digital Travel Companion </span>
+            </div>
+          </a>
+
+          <ul class="nav-links">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+
+            <li>
+              <a href="places.html">Tourist Places</a>
+            </li>
+
+            <li>
+              <a href="fare.html">Fare Calculator</a>
+            </li>
+
+            <li>
+              <a href="map.html">Live Map</a>
+            </li>
+
+            <li>
+              <a href="hotels.html">Hotels</a>
+            </li>
+
+            <li>
+              <a href="complaint.html">Complaint</a>
+            </li>
+
+            <li>
+              <a href="emergency.html">Emergency</a>
+            </li>
+
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <div class="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ======================
+HERO SECTION
+====================== -->
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content fade-up">
+          <h1>Experience The Divine Beauty Of Ayodhya</h1>
+
+          <p>
+            Welcome to Ayodhya Sarthi, your trusted digital travel companion for
+            exploring the spiritual, historical and cultural heritage of
+            Ayodhya. Discover sacred temples, comfortable accommodations, local
+            transportation, tourist assistance, travel guidance and much more
+            through one integrated platform.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="places.html" class="btn btn-primary"> Explore Places </a>
+
+            <a href="map.html" class="btn btn-secondary"> View Live Map </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================
+SEARCH SECTION
+====================== -->
+
+    <section class="search-section">
+      <div class="container">
+        <div class="search-box">
+          <h2 style="text-align: center; margin-bottom: 20px; color: #8b0000">
+            Find Your Destination
+          </h2>
+
+          <form class="search-form">
+            <input type="text" placeholder="Search Tourist Place" />
+
+            <select>
+              <option>Select Category</option>
+
+              <option>Temple</option>
+
+              <option>Historical Site</option>
+
+              <option>Riverfront</option>
+
+              <option>Museum</option>
+            </select>
+
+            <select>
+              <option>Travel Type</option>
+
+              <option>Family</option>
+
+              <option>Pilgrimage</option>
+
+              <option>Solo</option>
+
+              <option>Group Tour</option>
+            </select>
+
+            <button type="button" class="btn btn-primary">Search</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================
+POPULAR PLACES
+====================== -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Popular Destinations</h2>
+
+        <p class="section-subtitle">
+          Ayodhya is one of the most sacred cities in India and is believed to
+          be the birthplace of Lord Ram. The city attracts millions of pilgrims
+          and tourists every year.
+        </p>
+
+        <div class="card-grid">
+          <!-- CARD 1 -->
+
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1621682372775-533449e550ed?q=80&w=1200"
+                alt="Ram Mandir"
+              />
+            </div>
+
+            <div class="card-content">
+              <h3>Ram Janmabhoomi Mandir</h3>
+
+              <p>
+                The grand Shri Ram Janmabhoomi Temple is the spiritual center of
+                Ayodhya and one of the most visited pilgrimage destinations in
+                India.
+              </p>
+
+              <a href="places.html" class="btn btn-primary"> Read More </a>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=1200"
+                alt="Hanuman Garhi"
+              />
+            </div>
+
+            <div class="card-content">
+              <h3>Hanuman Garhi</h3>
+
+              <p>
+                A famous temple dedicated to Lord Hanuman. Visitors climb
+                several steps to receive blessings and enjoy beautiful views of
+                Ayodhya.
+              </p>
+
+              <a href="places.html" class="btn btn-primary"> Read More </a>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?q=80&w=1200"
+                alt="Kanak Bhawan"
+              />
+            </div>
+
+            <div class="card-content">
+              <h3>Kanak Bhawan</h3>
+
+              <p>
+                Known for its magnificent architecture, Kanak Bhawan is
+                associated with Lord Ram and Goddess Sita and remains a major
+                attraction.
+              </p>
+
+              <a href="places.html" class="btn btn-primary"> Read More </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======================
+WHY CHOOSE US
+====================== -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Why Choose Ayodhya Sarthi</h2>
+
+        <p class="section-subtitle">
+          Ayodhya Sarthi has been designed to provide tourists, pilgrims and
+          travelers with a single platform for exploring Ayodhya, finding
+          hotels, calculating fares, getting emergency support and discovering
+          important spiritual destinations.
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <i class="fas fa-map-location-dot"></i>
+
+            <h3>Smart Navigation</h3>
+
+            <p>
+              Explore Ayodhya effortlessly using interactive maps, tourist
+              guides and destination recommendations.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <i class="fas fa-hotel"></i>
+
+            <h3>Verified Hotels</h3>
+
+            <p>
+              Find trusted hotels, guest houses and dharamshalas with complete
+              information, ratings and contact details.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <i class="fas fa-calculator"></i>
+
+            <h3>Fare Calculator</h3>
+
+            <p>
+              Estimate transportation charges before starting your journey and
+              avoid overcharging.
+            </p>
+          </div>
+
+          <div class="feature-box">
+            <i class="fas fa-headset"></i>
+
+            <h3>Tourist Assistance</h3>
+
+            <p>
+              Access tourist help services and emergency contacts whenever you
+              need support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================
+SERVICES
+====================== -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+
+        <p class="section-subtitle">
+          Comprehensive digital services designed for every visitor coming to
+          Ayodhya.
+        </p>
+
+        <div class="card-grid">
+          <div class="service-card">
+            <i class="fas fa-place-of-worship"></i>
+
+            <h3>Temple Information</h3>
+
+            <p>
+              Detailed information about temples, darshan timings, visitor
+              guidelines and nearby attractions.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <i class="fas fa-route"></i>
+
+            <h3>Travel Planning</h3>
+
+            <p>
+              Plan your complete Ayodhya trip with recommended routes and travel
+              schedules.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <i class="fas fa-bed"></i>
+
+            <h3>Hotel Booking Guide</h3>
+
+            <p>
+              Compare accommodations and find comfortable stays according to
+              your budget.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <i class="fas fa-taxi"></i>
+
+            <h3>Transportation Support</h3>
+
+            <p>
+              Get fare estimates and transportation assistance for smooth
+              travel.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <i class="fas fa-shield-heart"></i>
+
+            <h3>Safety Assistance</h3>
+
+            <p>
+              Quick access to emergency contacts, hospitals and police
+              assistance.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <i class="fas fa-comments"></i>
+
+            <h3>Complaint Portal</h3>
+
+            <p>
+              Report fare disputes or service issues through a dedicated
+              complaint system.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================
+STATISTICS
+====================== -->
+
+    <section class="section stats">
+      <div class="container">
+        <h2 class="section-title" style="color: white">Tourism Statistics</h2>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <h2 class="counter" data-target="25000000">0</h2>
+
+            <p>Annual Visitors</p>
+          </div>
+
+          <div class="stat-box">
+            <h2 class="counter" data-target="150">0</h2>
+
+            <p>Tourist Attractions</p>
+          </div>
+
+          <div class="stat-box">
+            <h2 class="counter" data-target="500">0</h2>
+
+            <p>Hotels & Lodges</p>
+          </div>
+
+          <div class="stat-box">
+            <h2 class="counter" data-target="24">0</h2>
+
+            <p>Hour Support</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================
+FEATURED HOTELS
+====================== -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Featured Hotels</h2>
+
+        <p class="section-subtitle">
+          Popular accommodation options for tourists visiting Ayodhya.
+        </p>
+
+        <div class="card-grid">
+          <div class="hotel-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1566073771259-6a8506099945"
+                alt="Hotel"
+              />
+            </div>
+
+            <div class="hotel-details">
+              <h3>Royal Heritage Hotel</h3>
+
+              <p>
+                Comfortable luxury stay near Ram Janmabhoomi with modern
+                facilities.
+              </p>
+
+              <div class="hotel-meta">
+                <span class="badge"> ⭐ 4.8 Rating </span>
+
+                <span class="badge"> ₹3500 - ₹6500 </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hotel-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa"
+                alt="Hotel"
+              />
+            </div>
+
+            <div class="hotel-details">
+              <h3>Saryu Residency</h3>
+
+              <p>
+                Premium family-friendly hotel with excellent hospitality and
+                location.
+              </p>
+
+              <div class="hotel-meta">
+                <span class="badge"> ⭐ 4.6 Rating </span>
+
+                <span class="badge"> ₹2800 - ₹5000 </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hotel-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+                alt="Hotel"
+              />
+            </div>
+
+            <div class="hotel-details">
+              <h3>Ramayana Palace</h3>
+
+              <p>
+                Elegant accommodation with traditional Ayodhya-inspired design.
+              </p>
+
+              <div class="hotel-meta">
+                <span class="badge"> ⭐ 4.7 Rating </span>
+
+                <span class="badge"> ₹3000 - ₹5500 </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================
+TRAVEL GUIDE
+====================== -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Travel Guide</h2>
+
+        <p class="section-subtitle">
+          Helpful information for first-time visitors.
+        </p>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-content">
+              <h3>Best Time To Visit</h3>
+
+              <p>
+                October to March is considered the best period to visit Ayodhya.
+                The weather remains pleasant and ideal for sightseeing.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Local Transportation</h3>
+
+              <p>
+                Auto-rickshaws, e-rickshaws, taxis and buses are easily
+                available throughout the city.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Travel Tips</h3>
+
+              <p>
+                Carry comfortable footwear, keep drinking water and follow
+                temple guidelines during visits.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================
+TESTIMONIALS
+====================== -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">What Tourists Say</h2>
+
+        <p class="section-subtitle">Experiences shared by visitors.</p>
+
+        <div class="card-grid">
+          <div class="testimonial">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" />
+
+            <h3>Rahul Sharma</h3>
+
+            <p>
+              Ayodhya Sarthi helped me find important temples and hotels easily.
+              The fare calculator was extremely useful.
+            </p>
+          </div>
+
+          <div class="testimonial">
+            <img src="https://randomuser.me/api/portraits/women/45.jpg" />
+
+            <h3>Priya Verma</h3>
+
+            <p>
+              The live map and tourist information made our family pilgrimage
+              much easier and more enjoyable.
+            </p>
+          </div>
+
+          <div class="testimonial">
+            <img src="https://randomuser.me/api/portraits/men/62.jpg" />
+
+            <h3>Amit Singh</h3>
+
+            <p>
+              Beautiful interface and very helpful resources for travelers
+              visiting Ayodhya.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ======================
+FAQ SECTION
+====================== -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+
+        <p class="section-subtitle">
+          Common questions asked by tourists visiting Ayodhya.
+        </p>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            What is the best time to visit Ayodhya?
+          </div>
+
+          <div class="faq-answer">
+            October to March is generally considered the best time because the
+            weather remains pleasant and suitable for sightseeing and pilgrimage
+            activities.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How can I reach Ram Janmabhoomi?</div>
+
+          <div class="faq-answer">
+            You can reach Ram Janmabhoomi through local auto-rickshaws,
+            e-rickshaws, taxis and public transportation available throughout
+            Ayodhya.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Are hotels available near major temples?
+          </div>
+
+          <div class="faq-answer">
+            Yes, numerous hotels, guest houses and dharamshalas are available
+            near Ram Janmabhoomi, Hanuman Garhi and other major attractions.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Can I calculate transport fares before travelling?
+          </div>
+
+          <div class="faq-answer">
+            Yes. Use the Fare Calculator section to estimate taxi,
+            auto-rickshaw, e-rickshaw and bus fares.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Is emergency assistance available?</div>
+
+          <div class="faq-answer">
+            Yes. Ayodhya Sarthi provides emergency contacts including police,
+            ambulance, fire brigade and tourist helpline information.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================
+LATEST UPDATES
+====================== -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Latest Updates</h2>
+
+        <p class="section-subtitle">
+          Stay informed with recent tourism developments and important
+          announcements.
+        </p>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-content">
+              <h3>Ram Mandir Visitor Advisory</h3>
+
+              <p>
+                Visitors are advised to arrive early during weekends and
+                festivals due to increased pilgrim footfall.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Enhanced Tourist Facilities</h3>
+
+              <p>
+                New tourist information kiosks and guidance centers have been
+                established across key locations.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Improved Transport Services</h3>
+
+              <p>
+                Additional e-rickshaw and shuttle services are now available
+                near major tourist attractions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================
+NEWSLETTER
+====================== -->
+
+    <section class="section">
+      <div class="container">
+        <div class="form-box">
+          <h2 style="text-align: center; color: #8b0000; margin-bottom: 15px">
+            Subscribe To Our Newsletter
+          </h2>
+
+          <p style="text-align: center; margin-bottom: 25px">
+            Get travel updates, tourism news, hotel recommendations and
+            important announcements.
+          </p>
+
+          <form class="search-form">
+            <input type="text" placeholder="Your Name" />
+
+            <input type="email" placeholder="Your Email Address" />
+
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================
+CALL TO ACTION
+====================== -->
+
+    <section class="cta">
+      <div class="container">
+        <h2>Plan Your Spiritual Journey Today</h2>
+
+        <p style="max-width: 800px; margin: auto; margin-bottom: 30px">
+          Explore sacred temples, discover historical landmarks, book
+          comfortable accommodations and experience the divine atmosphere of
+          Ayodhya with Ayodhya Sarthi.
+        </p>
+
+        <a href="places.html" class="btn btn-secondary"> Start Exploring </a>
+      </div>
+    </section>
+
+    <!-- ======================
+FOOTER
+====================== -->
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3>Ayodhya Sarthi</h3>
+
+            <p>
+              Your Digital Travel Companion for Ayodhya. Helping pilgrims and
+              tourists discover the spiritual, cultural and historical heritage
+              of the sacred city.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <ul>
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+
+              <li>
+                <a href="places.html">Tourist Places</a>
+              </li>
+
+              <li>
+                <a href="fare.html">Fare Calculator</a>
+              </li>
+
+              <li>
+                <a href="map.html">Live Map</a>
+              </li>
+
+              <li>
+                <a href="hotels.html">Hotels</a>
+              </li>
+
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Tourist Services</h3>
+
+            <ul>
+              <li>Tourist Guidance</li>
+
+              <li>Hotel Information</li>
+
+              <li>Emergency Support</li>
+
+              <li>Transportation Help</li>
+
+              <li>Complaint Portal</li>
+
+              <li>Travel Planning</li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contact Information</h3>
+
+            <p>
+              <i class="fas fa-location-dot"></i>
+              Ayodhya, Uttar Pradesh, India
+            </p>
+
+            <p>
+              <i class="fas fa-phone"></i>
+              +91 98765 43210
+            </p>
+
+            <p>
+              <i class="fas fa-envelope"></i>
+              info@ayodhyasarthi.in
+            </p>
+
+            <div class="social-links">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+
+              <a href="#">
+                <i class="fab fa-x-twitter"></i>
+              </a>
+
+              <a href="#">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © <span id="currentYear"></span>
+            Ayodhya Sarthi. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ======================
+BACK TO TOP
+====================== -->
+
+    <button
+      id="backToTop"
+      style="
+        display: none;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 55px;
+        height: 55px;
+        border: none;
+        border-radius: 50%;
+        background: #ff6b00;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 999;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      "
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ======================
+SCRIPT FILE
+====================== -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
