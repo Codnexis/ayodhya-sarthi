@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fare Calculator | Ayodhya Sarthi</title>
+
+    <meta
+      name="description"
+      content="Calculate Auto, E-Rickshaw, Taxi and Bus fares in Ayodhya."
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="index.html" class="logo">
+            <i class="fas fa-om"></i>
+
+            <div class="logo-text">
+              <h2>Ayodhya Sarthi</h2>
+              <span>Your Digital Travel Companion</span>
+            </div>
+          </a>
+
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="places.html">Tourist Places</a></li>
+            <li><a href="fare.html">Fare Calculator</a></li>
+            <li><a href="map.html">Live Map</a></li>
+            <li><a href="hotels.html">Hotels</a></li>
+            <li><a href="complaint.html">Complaint</a></li>
+            <li><a href="emergency.html">Emergency</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Ayodhya Fare Calculator</h1>
+
+          <p>
+            Estimate transportation costs before starting your journey and
+            travel with confidence across Ayodhya.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALCULATOR -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Transportation Fare Calculator</h2>
+
+        <p class="section-subtitle">
+          Select your travel route and distance to estimate transportation
+          charges.
+        </p>
+
+        <div class="form-box">
+          <div class="form-grid">
+            <div class="form-group">
+              <label> From Location </label>
+
+              <select id="fromLocation">
+                <option>Ram Janmabhoomi</option>
+                <option>Hanuman Garhi</option>
+                <option>Kanak Bhawan</option>
+                <option>Ram Ki Paidi</option>
+                <option>Guptar Ghat</option>
+                <option>Ayodhya Dham Railway Station</option>
+                <option>Ayodhya Airport</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label> To Location </label>
+
+              <select id="toLocation">
+                <option>Ram Janmabhoomi</option>
+                <option>Hanuman Garhi</option>
+                <option>Kanak Bhawan</option>
+                <option>Ram Ki Paidi</option>
+                <option>Guptar Ghat</option>
+                <option>Ayodhya Dham Railway Station</option>
+                <option>Ayodhya Airport</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label> Distance (KM) </label>
+
+              <input type="number" id="distance" placeholder="Enter Distance" />
+            </div>
+          </div>
+
+          <div style="margin-top: 20px">
+            <button onclick="calculateFare()" class="btn btn-primary">
+              Calculate Fare
+            </button>
+          </div>
+
+          <div class="fare-result">
+            <h3>Estimated Fare Details</h3>
+
+            <br />
+
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Vehicle Type</th>
+                    <th>Estimated Fare</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Auto Rickshaw</td>
+
+                    <td id="autoFare">₹ 0</td>
+                  </tr>
+
+                  <tr>
+                    <td>E-Rickshaw</td>
+
+                    <td id="erickshawFare">₹ 0</td>
+                  </tr>
+
+                  <tr>
+                    <td>Taxi</td>
+
+                    <td id="taxiFare">₹ 0</td>
+                  </tr>
+
+                  <tr>
+                    <td>Bus</td>
+
+                    <td id="busFare">₹ 0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFORMATION SECTION -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Transportation Guide</h2>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-content">
+              <h3>Auto Rickshaw</h3>
+
+              <p>
+                Auto Rickshaws are widely available throughout Ayodhya and are
+                suitable for short-distance travel.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>E-Rickshaw</h3>
+
+              <p>
+                Eco-friendly transportation option commonly used near temples
+                and busy market areas.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Taxi Service</h3>
+
+              <p>
+                Comfortable transportation for families and tourists visiting
+                multiple destinations.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Bus Service</h3>
+
+              <p>
+                Budget-friendly transportation for travelers moving between
+                major locations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPULAR ROUTES -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Popular Tourist Routes</h2>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Route</th>
+                <th>Distance</th>
+                <th>Approx Time</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Ram Janmabhoomi → Hanuman Garhi</td>
+
+                <td>1.5 KM</td>
+
+                <td>5 Minutes</td>
+              </tr>
+
+              <tr>
+                <td>Ram Janmabhoomi → Kanak Bhawan</td>
+
+                <td>2 KM</td>
+
+                <td>8 Minutes</td>
+              </tr>
+
+              <tr>
+                <td>Ram Janmabhoomi → Ram Ki Paidi</td>
+
+                <td>3 KM</td>
+
+                <td>10 Minutes</td>
+              </tr>
+
+              <tr>
+                <td>Ram Janmabhoomi → Guptar Ghat</td>
+
+                <td>8 KM</td>
+
+                <td>20 Minutes</td>
+              </tr>
+
+              <tr>
+                <td>Ayodhya Airport → Ram Mandir</td>
+
+                <td>12 KM</td>
+
+                <td>25 Minutes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3>Ayodhya Sarthi</h3>
+
+            <p>
+              Providing reliable travel assistance, transport guidance and
+              tourism information for visitors.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="places.html">Tourist Places</a></li>
+              <li><a href="hotels.html">Hotels</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contact</h3>
+
+            <p>📍 Ayodhya, Uttar Pradesh</p>
+
+            <p>📞 +91 98765 43210</p>
+
+            <p>✉ info@ayodhyasarthi.in</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © <span id="currentYear"></span>
+            Ayodhya Sarthi. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+
+    <button
+      id="backToTop"
+      style="
+        display: none;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 55px;
+        height: 55px;
+        border: none;
+        border-radius: 50%;
+        background: #ff6b00;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 999;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      "
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="app.js"></script>
+  </body>
+</html>

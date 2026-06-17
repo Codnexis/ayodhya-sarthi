@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Complaint Portal | Ayodhya Sarthi</title>
+
+    <meta
+      name="description"
+      content="Register transport fare complaints, tourist service issues and travel-related grievances in Ayodhya."
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="index.html" class="logo">
+            <i class="fas fa-om"></i>
+
+            <div class="logo-text">
+              <h2>Ayodhya Sarthi</h2>
+              <span>Your Digital Travel Companion</span>
+            </div>
+          </a>
+
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="places.html">Tourist Places</a></li>
+            <li><a href="fare.html">Fare Calculator</a></li>
+            <li><a href="map.html">Live Map</a></li>
+            <li><a href="hotels.html">Hotels</a></li>
+            <li><a href="complaint.html">Complaint</a></li>
+            <li><a href="emergency.html">Emergency</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Tourist Complaint Portal</h1>
+
+          <p>
+            Report fare disputes, transportation issues, tourist service
+            complaints and other travel-related concerns directly through our
+            digital grievance system.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLAINT FORM -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Register Your Complaint</h2>
+
+        <p class="section-subtitle">
+          Fill out the form below with accurate details so our support team can
+          review your complaint and take appropriate action.
+        </p>
+
+        <div class="form-box">
+          <form id="complaintForm">
+            <div class="form-grid">
+              <div class="form-group">
+                <label> Tourist Name </label>
+
+                <input
+                  type="text"
+                  id="touristName"
+                  placeholder="Enter Full Name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label> Mobile Number </label>
+
+                <input
+                  type="tel"
+                  id="mobileNumber"
+                  placeholder="Enter Mobile Number"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label> Vehicle Number </label>
+
+                <input
+                  type="text"
+                  id="vehicleNumber"
+                  placeholder="UP XX XX XXXX"
+                />
+              </div>
+
+              <div class="form-group">
+                <label> Driver Name </label>
+
+                <input type="text" id="driverName" placeholder="Driver Name" />
+              </div>
+
+              <div class="form-group">
+                <label> Charged Fare (₹) </label>
+
+                <input
+                  type="number"
+                  id="chargedFare"
+                  placeholder="Fare Charged"
+                />
+              </div>
+
+              <div class="form-group">
+                <label> Expected Fare (₹) </label>
+
+                <input
+                  type="number"
+                  id="expectedFare"
+                  placeholder="Expected Fare"
+                />
+              </div>
+
+              <div class="form-group">
+                <label> Complaint Type </label>
+
+                <select id="complaintType">
+                  <option>Select Complaint Type</option>
+
+                  <option>Overcharging</option>
+
+                  <option>Misbehavior</option>
+
+                  <option>Vehicle Condition</option>
+
+                  <option>Fraud Activity</option>
+
+                  <option>Service Issue</option>
+
+                  <option>Tourist Harassment</option>
+
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label> Upload Evidence Image </label>
+
+                <input type="file" id="uploadImage" accept="image/*" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label> Complaint Description </label>
+
+              <textarea
+                id="description"
+                placeholder="Provide complete details of your complaint..."
+                required
+              ></textarea>
+            </div>
+
+            <img
+              id="previewImage"
+              style="
+                display: none;
+                max-width: 300px;
+                margin: 15px 0;
+                border-radius: 10px;
+              "
+            />
+
+            <button type="submit" class="btn btn-primary">
+              Submit Complaint
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLAINT PROCESS -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">How Complaint Resolution Works</h2>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-content">
+              <h3>1. Complaint Registration</h3>
+
+              <p>
+                Submit complete complaint details through the online complaint
+                portal.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>2. Verification Process</h3>
+
+              <p>
+                Our support team reviews the complaint and verifies the
+                submitted information.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>3. Investigation</h3>
+
+              <p>
+                Authorities investigate the reported issue and gather necessary
+                evidence.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>4. Resolution</h3>
+
+              <p>
+                Appropriate action is taken and the complainant is informed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMON COMPLAINTS -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Common Tourist Complaints</h2>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Complaint Category</th>
+
+                <th>Description</th>
+
+                <th>Priority</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Overcharging</td>
+
+                <td>Charging higher fare than approved rates</td>
+
+                <td>High</td>
+              </tr>
+
+              <tr>
+                <td>Misbehavior</td>
+
+                <td>Improper conduct by driver or service provider</td>
+
+                <td>Medium</td>
+              </tr>
+
+              <tr>
+                <td>Vehicle Condition</td>
+
+                <td>Unsafe or poorly maintained vehicles</td>
+
+                <td>Medium</td>
+              </tr>
+
+              <tr>
+                <td>Fraud</td>
+
+                <td>Misleading information or payment fraud</td>
+
+                <td>High</td>
+              </tr>
+
+              <tr>
+                <td>Tourist Harassment</td>
+
+                <td>Any form of harassment or intimidation</td>
+
+                <td>Critical</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPPORT SECTION -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Need Immediate Assistance?</h2>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-content">
+              <h3>Tourist Helpline</h3>
+
+              <p>
+                Get immediate assistance for urgent travel-related concerns.
+              </p>
+
+              <a href="tel:1363" class="btn btn-primary"> Call 1363 </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Police Assistance</h3>
+
+              <p>
+                Contact local police in case of security or safety concerns.
+              </p>
+
+              <a href="tel:112" class="btn btn-primary"> Call 112 </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Emergency Medical Help</h3>
+
+              <p>Immediate medical support for tourists.</p>
+
+              <a href="tel:108" class="btn btn-primary"> Call 108 </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3>Ayodhya Sarthi</h3>
+
+            <p>
+              A digital tourism platform providing travel assistance, tourist
+              information and support services.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="places.html">Tourist Places</a></li>
+              <li><a href="fare.html">Fare Calculator</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Support</h3>
+
+            <p>📞 Tourist Helpline: 1363</p>
+            <p>🚓 Police: 112</p>
+            <p>🚑 Ambulance: 108</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © <span id="currentYear"></span>
+            Ayodhya Sarthi. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+
+    <button
+      id="backToTop"
+      style="
+        display: none;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 55px;
+        height: 55px;
+        border: none;
+        border-radius: 50%;
+        background: #ff6b00;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 999;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      "
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="app.js"></script>
+  </body>
+</html>

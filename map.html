@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Live Map | Ayodhya Sarthi</title>
+
+    <meta
+      name="description"
+      content="Interactive tourist map of Ayodhya with major attractions, routes and nearby places."
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- LEAFLET -->
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="index.html" class="logo">
+            <i class="fas fa-om"></i>
+
+            <div class="logo-text">
+              <h2>Ayodhya Sarthi</h2>
+              <span>Your Digital Travel Companion</span>
+            </div>
+          </a>
+
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="places.html">Tourist Places</a></li>
+            <li><a href="fare.html">Fare Calculator</a></li>
+            <li><a href="map.html">Live Map</a></li>
+            <li><a href="hotels.html">Hotels</a></li>
+            <li><a href="complaint.html">Complaint</a></li>
+            <li><a href="emergency.html">Emergency</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Ayodhya Live Tourist Map</h1>
+
+          <p>
+            Explore temples, ghats, historical sites and tourist attractions
+            using our interactive map system.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP SECTION -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Interactive Tourist Map</h2>
+
+        <p class="section-subtitle">
+          Navigate Ayodhya easily and discover important religious and cultural
+          sites.
+        </p>
+
+        <div id="map"></div>
+      </div>
+    </section>
+
+    <!-- ROUTE PLANNER -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Route Planner</h2>
+
+        <div class="form-box">
+          <div class="form-grid">
+            <div class="form-group">
+              <label> Starting Point </label>
+
+              <select>
+                <option>Ram Janmabhoomi</option>
+                <option>Hanuman Garhi</option>
+                <option>Kanak Bhawan</option>
+                <option>Ram Ki Paidi</option>
+                <option>Guptar Ghat</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label> Destination </label>
+
+              <select>
+                <option>Ram Janmabhoomi</option>
+                <option>Hanuman Garhi</option>
+                <option>Kanak Bhawan</option>
+                <option>Ram Ki Paidi</option>
+                <option>Guptar Ghat</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="btn btn-primary">Find Route</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEARBY PLACES -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Nearby Attractions</h2>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-content">
+              <h3>Ram Janmabhoomi</h3>
+
+              <p>
+                Sacred birthplace of Lord Ram and the most important pilgrimage
+                destination in Ayodhya.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Hanuman Garhi</h3>
+
+              <p>
+                Popular Hanuman temple offering beautiful city views and
+                spiritual importance.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Kanak Bhawan</h3>
+
+              <p>Historic temple dedicated to Lord Ram and Goddess Sita.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Ram Ki Paidi</h3>
+
+              <p>Beautiful riverfront area along the holy Saryu River.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP LEGEND -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Map Legend</h2>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-content">
+              <h3>📍 Red Marker</h3>
+
+              <p>Major Religious Sites</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>📌 Blue Marker</h3>
+
+              <p>Tourist Attractions</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>🟢 Green Marker</h3>
+
+              <p>Your Current Location</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPULAR DESTINATIONS -->
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Popular Destinations</h2>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Destination</th>
+                <th>Category</th>
+                <th>Popularity</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Ram Janmabhoomi</td>
+                <td>Temple</td>
+                <td>★★★★★</td>
+              </tr>
+
+              <tr>
+                <td>Hanuman Garhi</td>
+                <td>Temple</td>
+                <td>★★★★★</td>
+              </tr>
+
+              <tr>
+                <td>Kanak Bhawan</td>
+                <td>Temple</td>
+                <td>★★★★☆</td>
+              </tr>
+
+              <tr>
+                <td>Ram Ki Paidi</td>
+                <td>Riverfront</td>
+                <td>★★★★★</td>
+              </tr>
+
+              <tr>
+                <td>Guptar Ghat</td>
+                <td>Historical</td>
+                <td>★★★★☆</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3>Ayodhya Sarthi</h3>
+
+            <p>
+              Helping tourists navigate Ayodhya through modern digital tools.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="places.html">Places</a></li>
+              <li><a href="fare.html">Fare</a></li>
+              <li><a href="hotels.html">Hotels</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contact</h3>
+
+            <p>📍 Ayodhya, Uttar Pradesh</p>
+            <p>📞 +91 98765 43210</p>
+            <p>✉ info@ayodhyasarthi.in</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © <span id="currentYear"></span>
+            Ayodhya Sarthi. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+
+    <button
+      id="backToTop"
+      style="
+        display: none;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 55px;
+        height: 55px;
+        border: none;
+        border-radius: 50%;
+        background: #ff6b00;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 999;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      "
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- LEAFLET JS -->
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+      /* AYODHYA MAP */
+
+      const map = L.map("map").setView([26.7996, 82.2042], 13);
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "© OpenStreetMap",
+      }).addTo(map);
+
+      /* TOURIST PLACES */
+
+      L.marker([26.7996, 82.2042]).addTo(map).bindPopup("Ram Janmabhoomi");
+
+      L.marker([26.802, 82.199]).addTo(map).bindPopup("Hanuman Garhi");
+
+      L.marker([26.8015, 82.2065]).addTo(map).bindPopup("Kanak Bhawan");
+
+      L.marker([26.81, 82.21]).addTo(map).bindPopup("Ram Ki Paidi");
+
+      L.marker([26.775, 82.18]).addTo(map).bindPopup("Guptar Ghat");
+
+      /* USER LOCATION */
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          function (position) {
+            const lat = position.coords.latitude;
+
+            const lng = position.coords.longitude;
+
+            L.marker([lat, lng])
+              .addTo(map)
+              .bindPopup("Your Location")
+              .openPopup();
+          },
+
+          function () {
+            console.log("Location permission denied");
+          },
+        );
+      }
+    </script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
