@@ -170,6 +170,24 @@
         opacity: 1;
         transform: translateY(0);
       }
+
+      .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-links a {
+  font-size: 24px;
+  color: #333;
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+  color: #ff6b00;
+}
     </style>
   </head>
 
@@ -305,10 +323,24 @@
           <div class="about-contact-card">
             <h3>Aryan</h3>
 
-            <p>Founder & Lead Developer</p>
+  <p>Founder & Lead Developer</p>
 
-            <p>📧 CodNexiss@email.com</p>
-          </div>
+  <p>📧 <a href="mailto:aryan@codnexiss.com">aryan@codnexiss.com</a></p>
+
+  <div class="social-links">
+    <a href="https://t.me/ACodNexis" target="_blank" aria-label="Telegram">
+      <i class="fa-brands fa-telegram"></i>
+    </a>
+
+    <a href="https://linkedin.com/in/aryan-kasaudhan-boss" target="_blank" aria-label="LinkedIn">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+
+    <a href="https://github.com/CodNexis" target="_blank" aria-label="GitHub">
+      <i class="fa-brands fa-github"></i>
+    </a>
+  </div>
+</div>
 
           <div class="about-contact-card">
             <h3>Prateek Shrivastava</h3>
