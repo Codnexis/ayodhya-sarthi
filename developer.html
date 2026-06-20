@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About Developers | Ayodhya Sarthi</title>
+
+    <meta
+      name="description"
+      content="Meet the developers behind Ayodhya Sarthi and learn about our mission, technology and vision."
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+       .about-developer-grid {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+      }
+
+      .about-developer-card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 35px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        transition: 0.3s;
+      }
+
+      .about-developer-card:hover {
+        transform: translateY(-8px);
+      }
+
+      .about-developer-card img {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #ea580c;
+      }
+
+      .about-developer-card h2 {
+        margin-top: 20px;
+        color: #1f2937;
+      }
+
+      .about-role {
+        display: block;
+        color: #ea580c;
+        font-weight: bold;
+        margin: 10px 0 20px;
+      }
+
+      .about-developer-card p {
+        color: #555;
+        line-height: 1.8;
+      }
+
+      .about-skill-tags {
+        margin-top: 20px;
+      }
+
+      .about-skill-tags span {
+        display: inline-block;
+        background: #fff7ed;
+        color: #ea580c;
+        padding: 8px 15px;
+        border-radius: 20px;
+        margin: 5px;
+      }
+
+      .about-content-box {
+        max-width: 1200px;
+        margin: 60px auto 0;
+        background: #fff;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .about-content-box h2 {
+        text-align: center;
+        color: #ea580c;
+        margin-bottom: 20px;
+      }
+
+      .about-content-box p {
+        text-align: center;
+        color: #555;
+        line-height: 2;
+      }
+
+      .about-technology-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .about-technology-grid span {
+        background: #ea580c;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 30px;
+      }
+
+      .about-contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+      }
+
+      .about-contact-card {
+        background: #fff7ed;
+        padding: 25px;
+        border-radius: 20px;
+        text-align: center;
+      }
+
+      .about-contact-card h3 {
+        color: #ea580c;
+        margin-bottom: 10px;
+      }
+
+      .about-social-section {
+        max-width: 1200px;
+        margin: 60px auto 0;
+        background: linear-gradient(135deg, #ea580c, #f97316);
+        padding: 50px 20px;
+        text-align: center;
+      }
+
+      .about-social-section h2,
+      .about-social-section p {
+        color: white;
+      }
+
+      .about-social-links {
+        margin-top: 25px;
+      }
+
+      .about-social-links a {
+        display: inline-block;
+        text-decoration: none;
+        background: white;
+        color: #ea580c;
+        padding: 12px 20px;
+        border-radius: 30px;
+        margin: 5px;
+        font-weight: bold;
+      }
+
+      .about-reveal {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+      }
+
+      .about-reveal.about-active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="index.html" class="logo">
+            <i class="fas fa-om"></i>
+
+            <div class="logo-text">
+              <h2>Ayodhya Sarthi</h2>
+              <span>Our Developer Team</span>
+            </div>
+          </a>
+
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="places.html">Tourist Places</a></li>
+            <li><a href="fare.html">Fare Calculator</a></li>
+            <li><a href="map.html">Live Map</a></li>
+            <li><a href="hotels.html">Hotels</a></li>
+            <li><a href="complaint.html">Complaint</a></li>
+            <li><a href="emergency.html">Emergency</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>About The Developers</h1>
+
+          <p>
+          Behind AyodhyaSarthi is a passionate team dedicated to making travel in Ayodhya easier, smarter, and more accessible.
+        </p>
+        </div>
+      </div>
+    </section>
+
+      <div class="about-developer-grid">
+        <div class="about-developer-card">
+          <img src="profile.png" alt="Developer" />
+
+          <h2>Aryan</h2>
+
+          <span class="about-role"> Founder & Lead Developer </span>
+
+          <p>
+            Founder of AyodhyaSarthi and passionate web developer dedicated to
+            creating modern digital solutions.
+          </p>
+
+          <div class="about-skill-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>SEO</span>
+            <span>UI/UX</span>
+          </div>
+        </div>
+
+        <div class="about-developer-card">
+          <img src="profile.png" alt="Prateek Shrivastava" />
+
+          <h2>Prateek Shrivastava</h2>
+
+          <span class="about-role"> Co-Developer & Technical Contributor </span>
+
+          <p>
+            Prateek contributes significantly to the development and improvement
+            of AyodhyaSarthi.
+          </p>
+
+          <div class="about-skill-tags">
+            <span>Web Development</span>
+            <span>Problem Solving</span>
+            <span>UI Design</span>
+            <span>Optimization</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Mission -->
+
+      <div class="about-content-box about-reveal">
+        <h2>🚩 Mission Of AyodhyaSarthi</h2>
+
+        <p>
+          AyodhyaSarthi aims to become the most trusted digital guide for
+          Ayodhya. Our mission is to provide pilgrims and travelers with
+          authentic information about temples, tourist attractions, hotels,
+          transportation, local services, and cultural heritage while preserving
+          the spiritual essence of the holy city.
+        </p>
+      </div>
+
+      <!-- Technologies -->
+
+      <div class="about-content-box about-reveal">
+        <h2>💻 Skills & Technologies</h2>
+
+        <div class="about-technology-grid">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+          <span>Responsive Design</span>
+          <span>SEO</span>
+          <span>UI/UX</span>
+          <span>GitHub</span>
+          <span>Vercel</span>
+          <span>Performance Optimization</span>
+        </div>
+      </div>
+
+      <!-- Contact -->
+
+      <div class="about-content-box about-reveal">
+        <h2>📞 Contact Developers</h2>
+
+        <div class="about-contact-grid">
+          <div class="about-contact-card">
+            <h3>Aryan</h3>
+
+            <p>Founder & Lead Developer</p>
+
+            <p>📧 CodNexiss@email.com</p>
+          </div>
+
+          <div class="about-contact-card">
+            <h3>Prateek Shrivastava</h3>
+
+            <p>Co-Developer</p>
+
+            <p>📧 prateek@email.com</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Section -->
+
+      <div class="about-social-section about-reveal">
+        <h2>🌐 Follow AyodhyaSarthi</h2>
+
+        <p>
+          Stay connected for updates, travel guides, local information and new
+          features.
+        </p>
+
+        <div class="about-social-links">
+          <a href="#">Instagram</a>
+
+          <a href="#">Facebook</a>
+
+          <a href="#">YouTube</a>
+
+          <a href="#">LinkedIn</a>
+
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3>Ayodhya Sarthi</h3>
+<p>🛕 Guiding Every Pilgrim's Journey Through Ayodhya.</p>
+            <p>Built with ❤️ by the AyodhyaSarthi Development Team. (CodNexis)</p>
+            
+            
+          </div>
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="places.html">Tourist Places</a></li>
+              <li><a href="fare.html">Fare Calculator</a></li>
+              <li><a href="map.html">Live Map</a></li>
+              <li><a href="hotels.html">Hotels</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Tourist Services</h3>
+
+            <ul>
+              <li>Temple Guide</li>
+              <li>Travel Support</li>
+              <li>Emergency Help</li>
+              <li>Hotel Information</li>
+              <li>Tourist Assistance</li>
+              <li>Fare Calculator</li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contact</h3>
+
+            <p>
+              <i class="fas fa-location-dot"></i>
+              Ayodhya, Uttar Pradesh
+            </p>
+
+            <p>
+              <i class="fas fa-phone"></i>
+              +91 98765 43210
+            </p>
+
+            <p>
+              <i class="fas fa-envelope"></i>
+              info@ayodhyasarthi.in
+            </p>
+
+            <div class="social-links">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+
+              <a href="#">
+                <i class="fab fa-youtube"></i>
+              </a>
+
+              <a href="#">
+                <i class="fab fa-x-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © <span id="currentYear"></span>
+            Ayodhya Sarthi. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back To Top -->
+
+    <button
+      id="backToTop"
+      style="
+        display: none;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 55px;
+        height: 55px;
+        border: none;
+        border-radius: 50%;
+        background: #ff6b00;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 999;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      "
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="app.js"></script>
+
+    <script>
+      const aboutReveals = document.querySelectorAll(".about-reveal");
+
+function revealAboutElements() {
+  aboutReveals.forEach((element) => {
+    const windowHeight = window.innerHeight;
+    const top = element.getBoundingClientRect().top;
+
+    if (top < windowHeight - 100) {
+      element.classList.add("about-active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealAboutElements);
+window.addEventListener("load", revealAboutElements);
+    </script>
+  </body>
+</html>
