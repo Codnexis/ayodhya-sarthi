@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "destination": "https://ayodhya-sarthi.netlify.app/:path*",
+      "permanent": true
+    }
+  ]
+}
