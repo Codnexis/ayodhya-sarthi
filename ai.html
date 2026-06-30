@@ -26,9 +26,39 @@
       }
       .header-left {display: flex; align-items: center; gap: 10px;}
       .menu-btn {
-        background: none; border: none; color: #fff; font-size: 22px; 
-        cursor: pointer; padding: 4px;
-      }
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    display: none;
+    overflow: hidden;
+}
+
+.navbar.active {
+    display: block;
+}
+
+.navbar a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background: #f2f2f2;
+}
       .logo-wrap {
         display: flex; align-items: center; gap: 8px; 
         border: 1px solid rgba(255, 153, 51, 0.4); padding: 6px 10px; 
@@ -128,7 +158,14 @@
   <body>
     <div class="header">
       <div class="header-left">
-        <button class="menu-btn">☰</button>
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html">Home</a>
+  <a href="#">Places</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</nav>
         <div class="logo-wrap">
           <div class="logo">🛕</div>
           <div class="header-title">
@@ -293,6 +330,29 @@ USER KA SAWAL: ${q}`;
       document.querySelectorAll('.action-card, .chip').forEach(el => {
         el.onclick = () => askAI(el.dataset.q);
       });
+
+      const menuBtn = document.getElementById("menuBtn");
+const navbar = document.getElementById("navbar");
+
+// Menu Open/Close
+menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    navbar.classList.toggle("active");
+});
+
+// Bahar click karte hi automatic close
+document.addEventListener("click", (e) => {
+    if (!navbar.contains(e.target) && e.target !== menuBtn) {
+        navbar.classList.remove("active");
+    }
+});
+
+// Menu ke kisi link par click hone ke baad bhi close
+document.querySelectorAll("#navbar a").forEach(link => {
+    link.addEventListener("click", () => {
+        navbar.classList.remove("active");
+    });
+});
     </script>
   </body>
 </html>
