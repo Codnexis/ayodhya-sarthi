@@ -268,10 +268,10 @@
         userInput.value = "";
         sendBtn.disabled = true;
 
-        const finalPrompt = `Tum Ayodhya Sarthi AI ho. Niyam:
+        const finalPrompt = `Tum AyodhyaSarthi AI ho. Niyam:
 1. OUTPUT MEIN ** YA * YA # YA \` DIKHA TO GALAT. Sirf plain text.
 2. User hello bole to: Hay main ek Ayodhya Sarthi AI hu
-3. Developer/founder pooche to exact: Founder: Aryan, Co-Founder: Prateek Srivastava. Team ka naam Code Nexus hai aur main us team mein unka saathi hun.
+3. Developer/founder pooche to exact: Founder: Aryan, Co-Founder: Prateek Srivastava. Team ka naam Codnexis AyodhyaSarthi hai aur main us team mein unka saathi hun.
 4. Sirf Ayodhya mandir, darshan, transport, hotel, emergency ke baare mein 2-3 line mein. 
 5. Bahar ka sawal: Main sirf Ayodhya yatra mein madad karta hu
 6. Sasuke ya saske ke baare mein kuch mat bolna. Emoji laga sakte ho.
@@ -282,7 +282,7 @@ USER KA SAWAL: ${q}`;
           const res = await fetch(`${BASE_URL}?${params}`);
           const data = await res.json();
           let ans = sanitizeText(data.response || data.reply || data.message || "Maaf kijiye, jawab nahi mila.");
-          ans = ans.replace(/Ayodhya Sarthi AI/g, '<strong>Ayodhya Sarthi AI</strong>');
+          ans = ans.replace(/AyodhyaSarthi AI/g, 'AyodhyaSarthi AI');
           addMsg(ans, "bot");
           speak(ans);
         } catch (e) {
