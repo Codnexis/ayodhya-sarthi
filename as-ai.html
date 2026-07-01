@@ -25,10 +25,30 @@
         display: flex; justify-content: space-between; align-items: center;
       }
       .header-left {display: flex; align-items: center; gap: 10px;}
-      .menu-btn {
-        background: none; border: none; color: #fff; font-size: 22px; 
-        cursor: pointer; padding: 4px;
-      }
+     .home-btn{
+    display: inline-flex;     
+    width: 55px;                  
+    height: 55px;                  
+    background: #ff8c00;           
+    color: #fff;           
+    font-size: 32px;             
+    text-decoration: none;      
+    border-radius: 50%;            
+    border: 2px solid #ffffff; 
+    transition: 0.3s ease;  
+    box-shadow: 0 4px 12px rgba(255,140,0,0.4); 
+}
+
+.home-btn:hover{
+    background: #ff6f00;          
+    color: #ffff00;                
+    transform: scale(1.1);       
+    box-shadow: 0 6px 18px rgba(255,140,0,0.6);
+}
+
+.home-btn:active{
+    transform: scale(0.95);
+} 
       .logo-wrap {
         display: flex; align-items: center; gap: 8px; 
         border: 1px solid rgba(255, 153, 51, 0.4); padding: 6px 10px; 
@@ -128,7 +148,7 @@
   <body>
     <div class="header">
       <div class="header-left">
-        <button class="menu-btn">☰</button>
+        <a href="index.html" class="home-btn">⌂</a>
         <div class="logo-wrap">
           <div class="logo">🛕</div>
           <div class="header-title">
