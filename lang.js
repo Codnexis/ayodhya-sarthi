@@ -5,7 +5,7 @@ let dragging = false;
 let startX = 0;
 let startY = 0;
 
-let x = window.innerWidth - 74;
+let x = window.innerWidth - 73;
 let y = window.innerHeight - 135;
 
 updatePosition();
