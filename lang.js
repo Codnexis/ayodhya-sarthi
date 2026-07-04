@@ -6,7 +6,7 @@ let startX = 0;
 let startY = 0;
 
 let x = window.innerWidth - 80;
-let y = window.innerHeight - 250;
+let y = window.innerHeight - 160;
 
 updatePosition();
 
