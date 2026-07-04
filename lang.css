@@ -1,0 +1,71 @@
+.language-btn{
+    position:fixed;
+    left:calc(100vw - 80px);
+    top:calc(100vh - 120px);
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#ff9800,#ff5722);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:grab;
+    user-select:none;
+    touch-action:none;
+    z-index:999999;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+.language-btn svg{
+    width:30px;
+    height:30px;
+    fill:#fff;
+}
+
+#google_translate_element{
+    position:fixed;
+    display:none;
+    background:#fff;
+    padding:12px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    z-index:999999;
+}
+
+.goog-te-gadget{
+    font-size:0!important;
+}
+
+.goog-te-gadget select{
+    width:180px;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    background:#f3f3f3;
+    font-size:14px!important;
+    outline:none;
+}
+
+.goog-logo-link,
+.goog-te-gadget span,
+.goog-te-banner-frame.skiptranslate,
+.skiptranslate iframe{
+    display:none!important;
+}
+
+body{
+    top:0!important;
+}
+
+@media(max-width:768px){
+
+.language-btn{
+    width:55px;
+    height:55px;
+}
+
+.goog-te-gadget select{
+    width:160px;
+}
+
+}
