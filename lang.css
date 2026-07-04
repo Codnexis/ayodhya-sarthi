@@ -1,6 +1,6 @@
 .language-btn{
     position:fixed;
-    right: 20px;
+    left:calc(100vw - 74px);
     top:calc(100vh - 130px);
     width:60px;
     height:60px;
