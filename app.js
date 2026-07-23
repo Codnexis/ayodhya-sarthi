@@ -1,9 +1,3 @@
-/* =====================================================
-   AYODHYA SARTHI
-   COMPLETE JAVASCRIPT FILE
-   PART 1
-===================================================== */
-
 /* ==========================
    MOBILE NAVIGATION
 ========================== */
@@ -206,18 +200,6 @@ revealElements.forEach((element) => {
 });
 
 /* ==========================
-   PART 1 END
-========================== */
-
-console.log("Ayodhya Sarthi App.js Part 1 Loaded");
-
-/* =====================================================
-   AYODHYA SARTHI
-   COMPLETE JAVASCRIPT FILE
-   PART 2
-===================================================== */
-
-/* ==========================
    TOURIST PLACE SEARCH
 ========================== */
 
@@ -403,17 +385,7 @@ function animateFareResult(element) {
   }
 });
 
-/* ==========================
-   PART 2 END
-========================== */
 
-console.log("Ayodhya Sarthi App.js Part 2 Loaded");
-
-/* =====================================================
-   AYODHYA SARTHI
-   COMPLETE JAVASCRIPT FILE
-   PART 3
-===================================================== */
 
 /* ==========================
    COMPLAINT FORM VALIDATION
