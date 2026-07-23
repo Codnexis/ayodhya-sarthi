@@ -297,19 +297,19 @@ function calculateFare() {
      REALISTIC FARE CALCULATION
   ---------------------------*/
 
-  // Auto: ₹25 base + ₹10/km
-  const autoFare = Math.round(25 + distance * 10);
+  // Auto: ₹15 base + ₹10/km
+  const autoFare = Math.round(15 + distance * 10);
 
-  // E-Rickshaw: ₹15 up to 2 km, then ₹6/km
+  // E-Rickshaw: ₹10 up to 2 km, then ₹6/km
   let erickshawFare;
   if (distance <= 2) {
-    erickshawFare = 15;
+    erickshawFare = 10;
   } else {
-    erickshawFare = Math.round(15 + (distance - 2) * 6);
+    erickshawFare = Math.round(10 + (distance - 2) * 6);
   }
 
-  // Taxi: ₹60 base + ₹14/km
-  const taxiFare = Math.round(60 + distance * 14);
+  // Taxi: ₹20 base + ₹14/km
+  const taxiFare = Math.round(20 + distance * 14);
 
   // Bus: ₹5 base + ₹2/km
   const busFare = Math.round(5 + distance * 2);
