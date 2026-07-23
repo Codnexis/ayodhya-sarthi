@@ -290,44 +290,63 @@ function calculateFare() {
 
   if (isNaN(distance) || distance <= 0) {
     alert("Please enter a valid distance.");
-
     return;
   }
 
-  const autoFare = Math.round(30 + distance * 12);
+  /* --------------------------
+     REALISTIC FARE CALCULATION
+  ---------------------------*/
 
-  const erickshawFare = Math.round(20 + distance * 8);
+  // Auto: ₹25 base + ₹10/km
+  const autoFare = Math.round(25 + distance * 10);
 
-  const taxiFare = Math.round(80 + distance * 18);
+  // E-Rickshaw: ₹15 up to 2 km, then ₹6/km
+  let erickshawFare;
+  if (distance <= 2) {
+    erickshawFare = 15;
+  } else {
+    erickshawFare = Math.round(15 + (distance - 2) * 6);
+  }
 
-  const busFare = Math.round(10 + distance * 3);
+  // Taxi: ₹60 base + ₹14/km
+  const taxiFare = Math.round(60 + distance * 14);
+
+  // Bus: ₹5 base + ₹2/km
+  const busFare = Math.round(5 + distance * 2);
+
+  /* --------------------------
+     SHOW RESULTS
+  ---------------------------*/
 
   const auto = document.getElementById("autoFare");
-
   const erickshaw = document.getElementById("erickshawFare");
-
   const taxi = document.getElementById("taxiFare");
-
   const bus = document.getElementById("busFare");
 
   if (auto) {
     auto.innerText = "₹ " + autoFare;
+    animateFareResult(auto);
   }
 
   if (erickshaw) {
     erickshaw.innerText = "₹ " + erickshawFare;
+    animateFareResult(erickshaw);
   }
 
   if (taxi) {
     taxi.innerText = "₹ " + taxiFare;
+    animateFareResult(taxi);
   }
 
   if (bus) {
     bus.innerText = "₹ " + busFare;
+    animateFareResult(bus);
   }
 }
 
-/* GLOBAL FUNCTION */
+/* ==========================
+   GLOBAL FUNCTION
+========================== */
 
 window.calculateFare = calculateFare;
 
@@ -337,13 +356,12 @@ window.calculateFare = calculateFare;
 
 document.querySelectorAll(".distance-btn").forEach((button) => {
   button.addEventListener("click", () => {
-    const km = button.getAttribute("data-km");
+    const km = parseFloat(button.getAttribute("data-km"));
 
     const distanceInput = document.getElementById("distance");
 
     if (distanceInput) {
       distanceInput.value = km;
-
       calculateFare();
     }
   });
@@ -357,7 +375,7 @@ const distanceField = document.getElementById("distance");
 
 if (distanceField) {
   distanceField.addEventListener("input", () => {
-    if (distanceField.value > 0) {
+    if (parseFloat(distanceField.value) > 0) {
       calculateFare();
     }
   });
@@ -370,22 +388,24 @@ if (distanceField) {
 function animateFareResult(element) {
   if (!element) return;
 
-  element.style.transform = "scale(1.1)";
+  element.style.transform = "scale(1.08)";
 
   setTimeout(() => {
     element.style.transform = "scale(1)";
-  }, 300);
+  }, 250);
 }
+
+/* ==========================
+   ENABLE TRANSITION
+========================== */
 
 ["autoFare", "erickshawFare", "taxiFare", "busFare"].forEach((id) => {
   const el = document.getElementById(id);
 
   if (el) {
-    el.style.transition = "0.3s ease";
+    el.style.transition = "transform 0.25s ease";
   }
 });
-
-
 
 /* ==========================
    COMPLAINT FORM VALIDATION
