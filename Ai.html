@@ -6,7 +6,7 @@
     <title>Ayodhya Sarthi AI</title>
     <style>
       * {margin: 0; padding: 0; box-sizing: border-box;}
-      body {font-family: 'Segoe UI', system-ui, sans-serif; background: #0a0a0a; color: #ececf1; height: 100vh; display: flex; flex-direction: column; overflow: hidden;}
+      body {font-family: 'Segoe UI', system-ui, sans-serif; background: #0a0a0a; color: #ececf1; height: 100vh; display: flex; flex-direction: column; overflow: scroll;}
       body::before {content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: url('https://i.ibb.co/qMykHqq4/file-00000bd887206b9024e32963bf06c.png') center/cover; filter: brightness(0.4); z-index: -1;}
 .header {background: rgba(20, 20, 20, 0.6); backdrop-filter: blur(12px); padding: 10px 14px; border-bottom: 1px solid rgba(255, 153, 51, 0.15); display: flex; justify-content: space-between; align-items: center;}
 .logo-wrap {display: flex; align-items: center; gap: 8px; border: 1px solid rgba(255, 153, 51, 0.4); padding: 6px 10px; border-radius: 25px; background: rgba(255, 153, 51, 0.1);}
@@ -160,6 +160,7 @@
           3. Be attractive, polite and helpful. End with 1-2 questions so user can reply easily.
           4. If language is Hindi, use pure Hindi and Devnagari script.
           5. Keep answers short: 4-5 lines maximum. Only talk about Ayodhya, temples, hotels, travel.
+          6. If someone messages you, you will reply to him in English and then if he asks you to speak in some other language, only then will you speak to him in that language.
           `;
 
           const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
