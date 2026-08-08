@@ -188,8 +188,10 @@ ayodhya-sarthi/
 ├── download-icon.jpg
 └── favicon.png
 
-📄 Pages
-File	Description
+## Pages
+
+```File	Description
+
 index.html	Main website homepage
 Ai.html	AyodhyaSarthi AI
 places.html	Ayodhya places guide
@@ -206,51 +208,42 @@ kanak-readmore.html	Kanak Bhawan details
 
 ⚙️ Core Files
 style.css
-
 Main stylesheet for the website interface, layout, navigation, sections, cards and responsive design.
 
 app.js
-
 JavaScript functionality used throughout the website.
 
 lang.js
-
 JavaScript functionality for language support.
 
 lang.css
-
 Styles for the language interface.
 
 manifest.json
-
 Web application manifest containing application metadata.
 
 robots.txt
-
 Search engine crawling instructions.
 
 sitemap.xml
-
 Website sitemap for search engine discovery.
 
 favicon.png
-
 Website favicon.
 
-🚀 Run Locally
-Clone the repository
+## 🚀 Run Locally
+```Clone the repository
 git clone https://github.com/Codnexis/ayodhya-sarthi.git
 Enter the project directory
 cd ayodhya-sarthi
 Run the project
 
 Open index.html in your browser.
-
 For development, you can use VS Code with Live Server.
 
-🔧 Development
+## 🔧 Development
 
-Clone the repository:
+```Clone the repository:
 
 git clone https://github.com/Codnexis/ayodhya-sarthi.git
 cd ayodhya-sarthi
@@ -320,9 +313,9 @@ The project brings together useful information and digital tools to make discove
 
 🚩 जय श्री राम
 
-Ayodhya Sarthi — Explore • Discover • Experience Ayodhya
+AyodhyaSarthi — Explore • Discover • Experience Ayodhya
 
-🔗 Links
+## 🔗 Links
 
 🌐 Live Website:
 https://ayodhyasarthi.vercel.app
