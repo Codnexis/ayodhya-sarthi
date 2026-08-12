@@ -1,40 +1,221 @@
-.language-btn{
-    position:fixed;
-    left:calc(100vw - 73px);
-    top:calc(100vh - 135px);
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    background:linear-gradient(135deg,#ff9800,#ff5722);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor:grab;
-    user-select:none;
-    touch-action:none;
-    z-index:999999;
-    box-shadow:0 8px 20px rgba(0,0,0,.25);
+/* ================================
+   LANGUAGE BUTTON
+================================ */
+
+.language-btn {
+    position: fixed;
+    left: calc(100vw - 73px);
+    top: calc(100vh - 135px);
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+
+    z-index: 999999;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-.language-btn svg{
-    width:30px;
-    height:30px;
-    fill:#fff;
+
+/* SVG ICON */
+
+.language-btn svg {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+
+    pointer-events: none;
 }
 
-#google_translate_element{
-    position:fixed;
-    display:none;
-    background:#fff;
-    padding:12px;
-    border-radius:15px;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-    z-index:999999;
+
+/* ================================
+   GOOGLE TRANSLATE CONTAINER
+================================ */
+
+#google_translate_element {
+    position: fixed;
+
+    display: none;
+
+    /*
+       Dropdown ko screen ke right edge
+       se safe distance par rakhta hai
+    */
+    right: 20px;
+    bottom: 145px;
+
+    width: max-content;
+    max-width: calc(100vw - 40px);
+
+    padding: 12px;
+
+    background: #fff;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+    z-index: 999999;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
 }
 
-.goog-te-gadget{
-    font-size:0!important;
+
+/* ================================
+   GOOGLE TRANSLATE GADGET
+================================ */
+
+.goog-te-gadget {
+    font-size: 0 !important;
+    line-height: normal !important;
 }
+
+
+/* ================================
+   LANGUAGE SELECT
+================================ */
+
+.goog-te-gadget select {
+    width: 180px;
+    max-width: 100%;
+
+    padding: 10px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #f3f3f3;
+
+    font-size: 14px !important;
+
+    outline: none;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    display: block;
+}
+
+
+/* ================================
+   HIDE GOOGLE TRANSLATE ELEMENTS
+================================ */
+
+.goog-logo-link,
+.goog-te-gadget span,
+.goog-te-banner-frame.skiptranslate,
+.skiptranslate iframe {
+    display: none !important;
+}
+
+
+/* Google Translate body offset fix */
+
+body {
+    top: 0 !important;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    .language-btn {
+        width: 55px;
+        height: 55px;
+
+        /*
+           Button ko screen ke andar rakhta hai
+        */
+        left: calc(100vw - 65px);
+        top: calc(100vh - 125px);
+    }
+
+
+    .language-btn svg {
+        width: 27px;
+        height: 27px;
+    }
+
+
+    #google_translate_element {
+        right: 10px;
+        bottom: 135px;
+
+        max-width: calc(100vw - 20px);
+
+        padding: 10px;
+
+        border-radius: 13px;
+    }
+
+
+    .goog-te-gadget select {
+        width: 160px;
+        max-width: calc(100vw - 40px);
+
+        padding: 9px;
+
+        font-size: 14px !important;
+    }
+}
+
+
+/* ================================
+   VERY SMALL PHONES
+================================ */
+
+@media (max-width: 400px) {
+
+    .language-btn {
+        width: 52px;
+        height: 52px;
+
+        left: calc(100vw - 62px);
+        top: calc(100vh - 118px);
+    }
+
+
+    .language-btn svg {
+        width: 25px;
+        height: 25px;
+    }
+
+
+    #google_translate_element {
+        right: 8px;
+        bottom: 125px;
+
+        max-width: calc(100vw - 16px);
+
+        padding: 8px;
+    }
+
+
+    .goog-te-gadget select {
+        width: 145px;
+        max-width: calc(100vw - 32px);
+
+        padding: 8px;
+
+        font-size: 13px !important;
+    }
+}}
 
 .goog-te-gadget select{
     width:180px;
