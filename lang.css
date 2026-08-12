@@ -45,7 +45,7 @@
     font-size:14px!important;
     outline:none;
      cursor: pointer;
-    align-self:right;
+    justify-content:right;
 }
 
 .goog-logo-link,
