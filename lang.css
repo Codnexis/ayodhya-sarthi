@@ -1,384 +1,404 @@
-/* =========================================
-   LANGUAGE BUTTON
-   ========================================= */
+
+/* ================================
+   DRAGGABLE LANGUAGE BUTTON
+================================ */
 
 .language-btn {
-    position: fixed;
+  position: fixed;
 
-    /*
-       Default position:
-       Bottom-right side
-    */
-    right: 13px;
-    bottom: 75px;
+  right: 20px;
+  bottom: 40px;
 
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    background: linear-gradient(
-        135deg,
-        #ff9800,
-        #ff5722
-    );
+  background: linear-gradient(
+    135deg,
+    #ff9800,
+    #ff5722
+  );
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    cursor: grab;
-    user-select: none;
-    touch-action: none;
+  cursor: grab;
 
-    z-index: 999999;
+  z-index: 999999;
 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.25);
 
-    box-sizing: border-box;
+  user-select: none;
+  touch-action: none;
 
-    overflow: hidden;
+  /* Prevent accidental overflow */
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.language-btn:active {
+  cursor: grabbing;
 }
 
 
-/* =========================================
+/* ================================
    LANGUAGE BUTTON SVG
-   ========================================= */
+================================ */
 
 .language-btn svg {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 
-    fill: #ffffff;
+  fill: #fff;
 
-    display: block;
+  display: block;
 
-    pointer-events: none;
+  pointer-events: none;
 
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 
-/* =========================================
-   GOOGLE TRANSLATE CONTAINER
-   ========================================= */
+/* ================================
+   GOOGLE TRANSLATE BOX
+================================ */
 
 #google_translate_element {
-    position: fixed;
+  position: fixed;
 
-    /*
-       Dropdown language button ke upar rahega
-    */
-    right: 13px;
-    bottom: 145px;
+  /*
+    Default:
+    Button ke upar aur right side
+  */
+  right: 20px;
+  bottom: 110px;
 
-    display: none;
+  z-index: 999999;
 
-    width: max-content;
+  background: #fff;
 
-    /*
-       Screen se bahar jaane se rokega
-    */
-    max-width: calc(100vw - 26px);
+  padding: 12px;
 
-    padding: 12px;
+  border-radius: 15px;
 
-    background: #ffffff;
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.15);
 
-    border-radius: 15px;
+  display: none;
 
-    box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.15);
+  /*
+    Dropdown ko viewport ke bahar
+    jaane se rokta hai
+  */
+  max-width: calc(100vw - 40px);
 
-    z-index: 999999;
+  width: max-content;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    overflow: hidden;
+  overflow: hidden;
 }
 
 
-/* =========================================
+/* ================================
    GOOGLE TRANSLATE GADGET
-   ========================================= */
+================================ */
 
 .goog-te-gadget {
-    font-size: 0 !important;
+  font-size: 0 !important;
 
-    line-height: normal !important;
+  line-height: normal !important;
 
-    margin: 0 !important;
+  margin: 0 !important;
 
-    padding: 0 !important;
+  padding: 0 !important;
 
-    width: auto !important;
+  max-width: 100% !important;
 
-    max-width: 100% !important;
-
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
-/* =========================================
-   GOOGLE TRANSLATE SELECT
-   ========================================= */
+/* ================================
+   LANGUAGE SELECT
+================================ */
 
 .goog-te-gadget select {
-    width: 180px;
+  width: 180px;
 
-    max-width: 100%;
+  max-width: 100%;
 
-    min-width: 0;
+  min-width: 0;
 
-    padding: 10px;
+  padding: 10px;
 
-    margin: 0;
+  margin: 0;
 
-    border: none;
+  border: none;
 
-    border-radius: 10px;
+  border-radius: 10px;
 
-    background: #f3f3f3;
+  background: #f3f3f3;
 
-    color: #222222;
+  color: #222;
 
-    font-family: inherit;
+  font-family: Arial, sans-serif;
 
-    font-size: 14px !important;
+  font-size: 14px !important;
 
-    line-height: 1.4;
+  line-height: 1.4;
 
-    outline: none;
+  outline: none;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    display: block;
+  display: block;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
-/* =========================================
-   SELECT FOCUS
-   ========================================= */
+/* Select focus */
 
 .goog-te-gadget select:focus {
-    outline: none;
+  outline: none;
 
-    box-shadow:
-        0 0 0 2px rgba(255, 152, 0, 0.25);
+  box-shadow:
+    0 0 0 2px rgba(255, 152, 0, 0.25);
 }
 
 
-/* =========================================
-   REMOVE GOOGLE TRANSLATE UNWANTED ITEMS
-   ========================================= */
+/* ================================
+   HIDE GOOGLE BRANDING
+================================ */
 
 .goog-logo-link,
-.goog-te-gadget span,
-.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget span {
+  display: none !important;
+}
+
+
+/* ================================
+   HIDE GOOGLE TRANSLATE TOP BANNER
+================================ */
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+
+/* ================================
+   HIDE GOOGLE TRANSLATE IFRAME
+================================ */
+
 .skiptranslate iframe {
-    display: none !important;
+  display: none !important;
 }
 
 
-/* =========================================
+/* ================================
    GOOGLE TRANSLATE BODY FIX
-   ========================================= */
+================================ */
 
 body {
-    top: 0 !important;
+  top: 0 !important;
 }
 
 
-/* =========================================
-   PREVENT HORIZONTAL OVERFLOW
-   ========================================= */
-
-html,
-body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-
-/* =========================================
-   TABLET
-   ========================================= */
+/* ================================
+   TABLET / MOBILE
+================================ */
 
 @media (max-width: 768px) {
 
-    .language-btn {
-        width: 55px;
-        height: 55px;
+  .language-btn {
+    width: 55px;
+    height: 55px;
 
-        right: 10px;
-        bottom: 70px;
-    }
+    right: 10px;
+    bottom: 30px;
 
-
-    .language-btn svg {
-        width: 27px;
-        height: 27px;
-    }
+    max-width: 55px;
+    max-height: 55px;
+  }
 
 
-    #google_translate_element {
-        right: 10px;
-
-        /*
-           Button ke upar
-        */
-        bottom: 135px;
-
-        max-width: calc(100vw - 20px);
-
-        padding: 10px;
-
-        border-radius: 13px;
-    }
+  .language-btn svg {
+    width: 28px;
+    height: 28px;
+  }
 
 
-    .goog-te-gadget select {
-        width: 160px;
+  #google_translate_element {
+    right: 10px;
+    bottom: 95px;
 
-        max-width: calc(100vw - 40px);
+    max-width: calc(100vw - 20px);
 
-        padding: 9px;
+    padding: 10px;
 
-        font-size: 14px !important;
-    }
+    border-radius: 13px;
+  }
+
+
+  .goog-te-gadget select {
+    width: 160px;
+
+    max-width: calc(100vw - 40px);
+
+    padding: 9px;
+
+    font-size: 14px !important;
+  }
 }
 
 
-/* =========================================
-   SMALL MOBILE
-   ========================================= */
+/* ================================
+   SMALL MOBILE DEVICES
+================================ */
 
 @media (max-width: 480px) {
 
-    .language-btn {
-        width: 53px;
-        height: 53px;
+  .language-btn {
+    width: 52px;
+    height: 52px;
 
-        right: 9px;
-        bottom: 65px;
-    }
+    right: 15px;
+    bottom: 25px;
 
-
-    .language-btn svg {
-        width: 26px;
-        height: 26px;
-    }
+    max-width: 52px;
+    max-height: 52px;
+  }
 
 
-    #google_translate_element {
-        right: 9px;
-        bottom: 128px;
-
-        max-width: calc(100vw - 18px);
-
-        padding: 9px;
-
-        border-radius: 12px;
-    }
+  .language-btn svg {
+    width: 26px;
+    height: 26px;
+  }
 
 
-    .goog-te-gadget select {
-        width: 150px;
+  #google_translate_element {
+    right: 15px;
 
-        max-width: calc(100vw - 36px);
+    bottom: 87px;
 
-        padding: 8px;
+    /*
+      Screen width ke andar hi rahega
+    */
+    max-width: calc(100vw - 30px);
 
-        font-size: 13px !important;
-    }
+    padding: 10px;
+
+    border-radius: 12px;
+  }
+
+
+  .goog-te-gadget select {
+    width: 150px;
+
+    max-width: calc(100vw - 50px);
+
+    padding: 9px;
+
+    font-size: 13px !important;
+  }
 }
 
 
-/* =========================================
-   VERY SMALL PHONES
-   ========================================= */
+/* ================================
+   EXTRA SMALL DEVICES
+================================ */
 
 @media (max-width: 360px) {
 
-    .language-btn {
-        width: 50px;
-        height: 50px;
+  .language-btn {
+    width: 50px;
+    height: 50px;
 
-        right: 8px;
-        bottom: 60px;
-    }
+    right: 10px;
+    bottom: 20px;
 
-
-    .language-btn svg {
-        width: 24px;
-        height: 24px;
-    }
+    max-width: 50px;
+    max-height: 50px;
+  }
 
 
-    #google_translate_element {
-        right: 8px;
-        bottom: 120px;
-
-        max-width: calc(100vw - 16px);
-
-        padding: 8px;
-
-        border-radius: 11px;
-    }
+  .language-btn svg {
+    width: 25px;
+    height: 25px;
+  }
 
 
-    .goog-te-gadget select {
-        width: 140px;
+  #google_translate_element {
+    right: 10px;
 
-        max-width: calc(100vw - 32px);
+    bottom: 80px;
 
-        padding: 8px;
+    max-width: calc(100vw - 20px);
 
-        font-size: 13px !important;
-    }
+    padding: 8px;
+
+    border-radius: 11px;
+  }
+
+
+  .goog-te-gadget select {
+    width: 140px;
+
+    max-width: calc(100vw - 36px);
+
+    padding: 8px;
+
+    font-size: 13px !important;
+  }
 }
 
 
-/* =========================================
+/* ================================
    LANDSCAPE MOBILE
-   ========================================= */
+================================ */
 
 @media (max-height: 500px) and (orientation: landscape) {
 
-    .language-btn {
-        width: 48px;
-        height: 48px;
+  .language-btn {
+    width: 48px;
+    height: 48px;
 
-        right: 10px;
-        bottom: 15px;
-    }
+    right: 10px;
+    bottom: 15px;
 
-
-    .language-btn svg {
-        width: 23px;
-        height: 23px;
-    }
+    max-width: 48px;
+    max-height: 48px;
+  }
 
 
-    #google_translate_element {
-        right: 10px;
-        bottom: 73px;
-
-        max-width: calc(100vw - 20px);
-
-        padding: 8px;
-    }
+  .language-btn svg {
+    width: 23px;
+    height: 23px;
+  }
 
 
-    .goog-te-gadget select {
-        width: 150px;
+  #google_translate_element {
+    right: 10px;
 
-        max-width: calc(100vw - 36px);
+    bottom: 73px;
 
-        padding: 7px;
+    max-width: calc(100vw - 20px);
 
-        font-size: 13px !important;
-    }
+    padding: 8px;
+  }
+
+
+  .goog-te-gadget select {
+    width: 150px;
+
+    max-width: calc(100vw - 36px);
+
+    padding: 7px;
+
+    font-size: 13px !important;
+  }
 }
