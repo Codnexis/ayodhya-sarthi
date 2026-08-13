@@ -2,7 +2,7 @@
       /* Draggable Language Button */
       .language-btn {
         position: fixed;
-        right:20px;
+        left:20px;
         bottom: 40px;
         width: 60px;
         height: 60px;
