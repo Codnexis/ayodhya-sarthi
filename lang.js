@@ -1,94 +1,76 @@
-const langBtn = document.getElementById("langBtn");
-const translateBox = document.getElementById("google_translate_element");
+     const langBtn = document.getElementById("langBtn");
+      const translateBox = document.getElementById("google_translate_element");
 
-let dragging = false;
-let startX = 0;
-let startY = 0;
+      let isDragging = false;
+      let offsetX = 0;
+      let offsetY = 0;
 
-let x = window.innerWidth - 73;
-let y = window.innerHeight - 135;
+      langBtn.addEventListener("click", function () {
+        if (isDragging) return;
 
-updatePosition();
+        translateBox.style.display =
+          translateBox.style.display === "block" ? "none" : "block";
+      });
 
-function updatePosition() {
-  langBtn.style.left = x + "px";
-  langBtn.style.top = y + "px";
+      langBtn.addEventListener("mousedown", startDrag);
+      langBtn.addEventListener("touchstart", startDrag, { passive: false });
 
-  translateBox.style.left = x + "px";
-  translateBox.style.top = (y - 90) + "px";
-}
+      function startDrag(e) {
+        isDragging = false;
 
-function startDrag(e) {
+        const point = e.touches ? e.touches[0] : e;
+        const rect = langBtn.getBoundingClientRect();
 
-  dragging = false;
+        offsetX = point.clientX - rect.left;
+        offsetY = point.clientY - rect.top;
 
-  const point = e.touches ? e.touches[0] : e;
+        document.addEventListener("mousemove", drag);
+        document.addEventListener("mouseup", stopDrag);
 
-  startX = point.clientX - x;
-  startY = point.clientY - y;
+        document.addEventListener("touchmove", drag, { passive: false });
+        document.addEventListener("touchend", stopDrag);
+      }
 
-  document.addEventListener("mousemove", drag);
-  document.addEventListener("mouseup", stopDrag);
+      function drag(e) {
+        e.preventDefault();
+        isDragging = true;
 
-  document.addEventListener("touchmove", drag, { passive: false });
-  document.addEventListener("touchend", stopDrag);
-}
+        const point = e.touches ? e.touches[0] : e;
 
-function drag(e) {
+        let x = point.clientX - offsetX;
+        let y = point.clientY - offsetY;
 
-  e.preventDefault();
+        const maxX = window.innerWidth - langBtn.offsetWidth;
+        const maxY = window.innerHeight - langBtn.offsetHeight;
 
-  dragging = true;
+        x = Math.max(0, Math.min(x, maxX));
+        y = Math.max(0, Math.min(y, maxY));
 
-  const point = e.touches ? e.touches[0] : e;
+        langBtn.style.left = x + "px";
+        langBtn.style.top = y + "px";
+        langBtn.style.right = "auto";
+        langBtn.style.bottom = "auto";
 
-  x = point.clientX - startX;
-  y = point.clientY - startY;
+        translateBox.style.left = x + "px";
+        translateBox.style.top = y - 90 + "px";
+        translateBox.style.right = "auto";
+        translateBox.style.bottom = "auto";
+      }
 
-  x = Math.max(0, Math.min(x, window.innerWidth - langBtn.offsetWidth));
-  y = Math.max(0, Math.min(y, window.innerHeight - langBtn.offsetHeight));
+      function stopDrag() {
+        setTimeout(() => {
+          isDragging = false;
+        }, 100);
 
-  updatePosition();
-}
+        document.removeEventListener("mousemove", drag);
+        document.removeEventListener("mouseup", stopDrag);
 
-function stopDrag() {
+        document.removeEventListener("touchmove", drag);
+        document.removeEventListener("touchend", stopDrag);
+      }
 
-  document.removeEventListener("mousemove", drag);
-  document.removeEventListener("mouseup", stopDrag);
-
-  document.removeEventListener("touchmove", drag);
-  document.removeEventListener("touchend", stopDrag);
-
-  setTimeout(() => {
-    dragging = false;
-  }, 100);
-}
-
-langBtn.addEventListener("mousedown", startDrag);
-langBtn.addEventListener("touchstart", startDrag, { passive: false });
-
-langBtn.addEventListener("click", () => {
-
-  if (dragging) return;
-
-  translateBox.style.display =
-    translateBox.style.display === "block" ? "none" : "block";
-
-});
-
-document.addEventListener("click", (e) => {
-
-  if (!langBtn.contains(e.target) && !translateBox.contains(e.target)) {
-    translateBox.style.display = "none";
-  }
-
-});
-
-window.addEventListener("resize", () => {
-
-  x = Math.min(x, window.innerWidth - langBtn.offsetWidth);
-  y = Math.min(y, window.innerHeight - langBtn.offsetHeight);
-
-  updatePosition();
-
-});
+      document.addEventListener("click", function (e) {
+        if (!translateBox.contains(e.target) && !langBtn.contains(e.target)) {
+          translateBox.style.display = "none";
+        }
+      });
