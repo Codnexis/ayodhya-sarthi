@@ -31,7 +31,7 @@
       /* Translate Box */
       #google_translate_element {
         position: fixed;
-        right: 20px;
+        left: 20px;
         bottom: 90px;
         z-index: 999999;
         background: #fff;
