@@ -3,27 +3,27 @@
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://ayodhya-sarthi.vercel.app/</loc>
+    <loc>https://ayodhyasarthi.vercel.app/</loc>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://ayodhya-sarthi.vercel.app/hotels</loc>
+    <loc>https://ayodhyasarthi.vercel.app/hotels</loc>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://ayodhya-sarthi.vercel.app/tourist-places</loc>
+    <loc>https://ayodhyasarthi.vercel.app/tourist-places</loc>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://ayodhya-sarthi.vercel.app/fare-calculator</loc>
+    <loc>https://ayodhyasarthi.vercel.app/fare-calculator</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ayodhya-sarthi.vercel.app/emergency-services</loc>
+    <loc>https://ayodhyasarthi.vercel.app/emergency-services</loc>
     <priority>0.8</priority>
   </url>
 
